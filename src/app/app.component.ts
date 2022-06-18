@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'ui-test-angular';
+  
+  constructor(private titleService: Title) {
+    this.titleService.setTitle('Rule of Thumb');
+  }
+
 }
