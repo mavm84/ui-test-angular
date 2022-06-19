@@ -2,9 +2,9 @@
   <app-current-rule></app-current-rule>
 
   <!-- CLOSABLE DESCRIPTION -->
-  <div class="row">
+  <div class="row g-0">
     <div class="offset-1 col-10">
-      <div class="row description-container">
+      <div class="row description-container g-0" *ngIf="!isAdClose">
 
         <div class="col-2 left-desc">
           <span class="default-text"> Speak out. Be heard. </span>
@@ -14,7 +14,7 @@
           <span class="default-text"> Rule of Thumb is a crow sourced public opinion where anyone and everyone can speak out and speak freely. It's easy. You share your opinion, we analyze and put the data in a public report. </span>
         </div>
         <div class="col-1 close">
-          <span aria-hidden="true">&times;</span>
+          <img src="../../../assets/img/close.svg" (click)="onClose()">
         </div>
 
       </div>
@@ -22,16 +22,16 @@
   </div>
 
   <!-- PREVIOUS RULINGS -->
-  <div class="row">
+  <div class="row g-0">
     <div class="offset-1 col-10">
-
+      <app-previous-rulings></app-previous-rulings>
     </div>
   </div>
 
   <!-- SUBMIT NEW -->
-  <div class="row">
+  <div class="row g-0">
     <div class="offset-1 col-10">
-      <div class="row submit-container">
+      <div class="submit-container">
 
         <div class="backdrop">
           <span class="submit-description"> Is there anyone else you would want us to add? </span>

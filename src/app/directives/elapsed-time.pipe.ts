@@ -31,11 +31,11 @@ export class ElapsedTimePipe implements PipeTransform {
       elapsedTime = elapsedTimeObject;
     }
 
-    const yearsTime = elapsedTime.years ? `${elapsedTime.years}yr. ` : '';
-    const monthsTime = elapsedTime.months ? `${elapsedTime.months}mo. ` : '';
-    const daysTime = elapsedTime.days && !elapsedTime.years ? `${elapsedTime.days}d. ` : '';
+    const yearsTime = elapsedTime.years ? `${elapsedTime.years} ${elapsedTime.years > 1 ? 'years' : 'year'} ` : '';
+    const monthsTime = elapsedTime.months ? `${elapsedTime.months} ${elapsedTime.months > 1 ? 'months' : 'month'} ` : '';
+    const daysTime = elapsedTime.days && !elapsedTime.years ? `${elapsedTime.days} ${elapsedTime.days > 1 ? 'days' : 'day'} ` : '';
 
-    return `${yearsTime}${monthsTime}${daysTime}`;
+    return yearsTime ? yearsTime : (monthsTime ? monthsTime : (daysTime));
 
   }
 }

@@ -5,7 +5,8 @@
   .description-container {
     background-color: #ebebeb;
     height: 80px;
-    margin: 40px;
+    margin: 40px 40px 20px;
+    padding: 15px;
 
     .left-desc {
       display: flex;
@@ -19,11 +20,9 @@
     .close {
       align-self: center;
       text-align: right;
-      font-weight: 200;
-      font-size: 40px;
-      span:hover {
-        font-weight: 300;
+      img:hover {
         cursor: pointer;
+        transform: scale(1.1);
       }
     }
 
@@ -52,6 +51,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 30px;
+      height: 100%;
 
       .submit-description {
         font-size: 28px;

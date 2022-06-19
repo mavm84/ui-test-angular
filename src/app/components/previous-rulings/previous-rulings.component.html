@@ -1,0 +1,74 @@
+<div class="rulings-container">
+
+  <div class="top-row">
+    <span class="title"> Previous Rulings </span>
+    <div class="dropdown">
+      <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        List
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">List</a></li>
+        <li><a class="dropdown-item" href="#">Grid</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div *ngFor="let ruling of previousRulings" class="rule-container">
+    <div class="backdrop"></div>
+    <div class="trend-thumb"
+      [ngClass]="{'thumbs-down': getNegativeTrend(ruling)}">
+    </div>
+
+    <div class="gauge">
+      <div class="gauge-bar positive"
+        [style.width.%]="getPercentage(ruling, 'positive')">
+        <img src="../../../assets/img/thumbs-up.svg">
+        <span> {{ getPercentage(ruling, 'positive') | number: '1.1-1' }}% </span>
+      </div>
+      <div class="gauge-bar negative"
+        [style.width.%]="getPercentage(ruling, 'negative')">
+        <span> {{ getPercentage(ruling, 'negative') | number: '1.1-1' }}% </span>
+        <img src="../../../assets/img/thumbs-down.svg">
+      </div>
+    </div>
+
+    <div class="info-row">
+      <img src="{{ '../../../assets/img/' + ruling['picture'] }}">
+      <div class="content">
+        <span class="title"> {{ ruling['name'] }} </span>
+        <span class="description"> {{ ruling['description'] }} </span>
+      </div>
+      <div class="vote-container">
+        <span class="elapsed-time"> {{ ruling['lastUpdated'] | elapsedTime }} in {{ ruling['category'] }} </span>
+        <div class="buttons-container">
+          <button
+            *ngIf="ruling['vote'] === ''"
+            type="button"
+            class="vote-button thumbs-up"
+            [ngClass]="{'selected': ruling['selected'] === 'positive'}"
+            (click)="toggleVote(ruling, 'positive')">
+            <img src="../../../assets/img/thumbs-up.svg">
+          </button>
+          <button
+            *ngIf="ruling['vote'] === ''"
+            type="button"
+            class="vote-button thumbs-down"
+            [ngClass]="{'selected': ruling['selected'] === 'negative'}"
+            (click)="toggleVote(ruling, 'negative')">
+            <img src="../../../assets/img/thumbs-down.svg">
+          </button>
+          <button
+            type="button"
+            class="vote-now"
+            (click)="onVote(ruling)"
+            [disabled]="!ruling['selected'] && ruling['vote'] === ''">
+            <span *ngIf="ruling['vote'] !== ''"> Vote Again </span>
+            <span *ngIf="ruling['vote'] === ''"> Vote Now </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  isAdClose = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClose(): void {
+    this.isAdClose = true;
   }
 
 }

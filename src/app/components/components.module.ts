@@ -4,8 +4,9 @@ import { CommonModule } from '@angular/common';
 import { DirectivesModule } from '../directives/directives.module';
 
 import { HeaderComponent } from './header/header.component';
-import { CurrentRuleComponent } from './current-rule/current-rule.component';
 import { FooterComponent } from './footer/footer.component';
+import { CurrentRuleComponent } from './current-rule/current-rule.component';
+import { PreviousRulingsComponent } from './previous-rulings/previous-rulings.component';
 
 @NgModule({
   imports: [
@@ -14,13 +15,15 @@ import { FooterComponent } from './footer/footer.component';
   ],
   declarations: [
     HeaderComponent,
+    FooterComponent,
     CurrentRuleComponent,
-    FooterComponent
+    PreviousRulingsComponent
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    CurrentRuleComponent
+    CurrentRuleComponent,
+    PreviousRulingsComponent
   ]
 })
 export class ComponentsModule { }
