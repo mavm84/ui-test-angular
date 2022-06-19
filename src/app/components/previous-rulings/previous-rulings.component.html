@@ -39,7 +39,8 @@
         <span class="description"> {{ ruling['description'] }} </span>
       </div>
       <div class="vote-container">
-        <span class="elapsed-time"> {{ ruling['lastUpdated'] | elapsedTime }} in {{ ruling['category'] }} </span>
+        <span class="elapsed-time" *ngIf="ruling['vote'] === ''"> {{ ruling['lastUpdated'] | elapsedTime }} in {{ ruling['category'] }} </span>
+        <span class="elapsed-time" *ngIf="ruling['vote'] !== ''"> Thank you for your vote! </span>
         <div class="buttons-container">
           <button
             *ngIf="ruling['vote'] === ''"

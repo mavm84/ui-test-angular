@@ -3,7 +3,7 @@ import * as moment from 'moment';
 
 @Pipe({ name: 'elapsedTime' })
 export class ElapsedTimePipe implements PipeTransform {
-  transform(input: number): string {
+  transform(input: string): string {
     let elapsedTime: any;
     const eventTime = moment(input);
     const elapsedTimeObject = {
