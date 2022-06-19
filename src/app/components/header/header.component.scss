@@ -17,11 +17,15 @@
       color: #FFFFFF;
       font-weight: 100;
       font-size: 20px;
+      &:hover {
+        font-weight: 200;
+      }
     }
     .search {
       margin: 0 20px;
       &:hover {
         cursor: pointer;
+        transform: scale(1.1);
       }
     }
     .navbar-collapse {

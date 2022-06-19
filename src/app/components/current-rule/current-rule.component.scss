@@ -57,6 +57,9 @@
         &.thumbs-down {
           background-color: #f0ac50;
         }
+        &:hover {
+          border: 2px solid #FFFFFF;
+        }
       }
     }
   }

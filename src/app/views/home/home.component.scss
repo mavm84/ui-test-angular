@@ -21,6 +21,10 @@
       text-align: right;
       font-weight: 200;
       font-size: 40px;
+      span:hover {
+        font-weight: 300;
+        cursor: pointer;
+      }
     }
 
     .default-text {
@@ -61,6 +65,9 @@
         span {
           font-size: 28px;
           opacity: 0.7;
+        }
+        &:hover {
+          border: 3px solid #000000;
         }
       }
     }
