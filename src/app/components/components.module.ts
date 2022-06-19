@@ -5,6 +5,7 @@ import { DirectivesModule } from '../directives/directives.module';
 
 import { HeaderComponent } from './header/header.component';
 import { CurrentRuleComponent } from './current-rule/current-rule.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -13,10 +14,12 @@ import { CurrentRuleComponent } from './current-rule/current-rule.component';
   ],
   declarations: [
     HeaderComponent,
-    CurrentRuleComponent
+    CurrentRuleComponent,
+    FooterComponent
   ],
   exports: [
     HeaderComponent,
+    FooterComponent,
     CurrentRuleComponent
   ]
 })

@@ -1,11 +1,11 @@
 .current-rule-container {
-  height: 700px;
+  // height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 
   .top-row {
-    padding: 150px 0 0;
+    padding: 150px 0 110px;
     .veredict-container {
       background-color: rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(20px);

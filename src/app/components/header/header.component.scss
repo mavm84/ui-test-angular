@@ -1,9 +1,9 @@
 .header {
-  position: fixed;
+  position: absolute;
   z-index: 1;
   height: 160px;
   width: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.0) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0) 100%);
 
   .navbar {
     padding: 0 150px;

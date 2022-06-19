@@ -1,4 +1,37 @@
 .home-container {
   background-color: #FFFFFF;
   width: 100%;
+
+  .description-container {
+    background-color: #ebebeb;
+    height: 80px;
+    margin: 40px;
+
+    .left-desc {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+    }
+    .center-desc {
+      display: flex;
+      align-self: center;
+    }
+    .close {
+      align-self: center;
+      text-align: right;
+      font-weight: 200;
+      font-size: 40px;
+    }
+
+    .default-text {
+      font-weight: 100;
+      font-size: 18px;
+      line-height: 1;
+    }
+    .highlight-text {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 1;
+    }
+  }
 }
