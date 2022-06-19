@@ -1,0 +1,37 @@
+<div class="current-rule-container"
+  [ngStyle]="{'background-image': 'url(' + currentRule.picture + ')'}">
+
+  <div class="row top-row">
+    <div class="offset-1 col-5">
+
+      <div class="veredict-container">
+        <span class="default-text"> What's your opinion on </span>
+        <span class="name"> {{currentRule.name}}? </span>
+        <span class="description"> {{currentRule.description}} </span>
+        <div class="wiki-row">
+          <img src="../../../assets/img/wikipedia.svg">
+          <span class="default-text"> More Information </span>
+        </div>
+        <span class="veredict"> What's Your Veredict? </span>
+      </div>
+
+      <div class="buttons-container">
+        <button type="button" class="vote-button thumbs-up">
+          <img src="../../../assets/img/thumbs-up.svg">
+        </button>
+        <button type="button" class="vote-button thumbs-down">
+          <img src="../../../assets/img/thumbs-down.svg">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row days-count g-0">
+    <div class="col-3 closing">
+      <span>Closing In</span>
+    </div>
+    <div class="col-9 days">
+      <span><strong>{{ getRemainingDays(currentRule.endDate)}}</strong> days</span>
+    </div>
+  </div>
+</div>

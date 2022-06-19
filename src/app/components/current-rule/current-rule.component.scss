@@ -1,0 +1,89 @@
+.current-rule-container {
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .top-row {
+    padding: 150px 0 0;
+    .veredict-container {
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(20px);
+      margin-left: 40px;
+      padding: 30px 20px 0;
+      display: flex;
+      flex-direction: column;
+      color: #FFFFFF;
+
+      .default-text {
+        font-weight: 200;
+        font-size: 18px;
+      }
+      .name {
+        font-size: 46px;
+      }
+      .veredict {
+        font-size: 28px;
+        padding: 5px 0 20px;
+      }
+      .description {
+        font-size: 24px;
+        font-weight: 100;
+        padding: 10px 0;
+      }
+
+      .wiki-row {
+        padding: 10px 0 5px;
+        display: flex;
+        align-items: center;
+        span {
+          padding: 0 15px;
+        }
+      }
+    }
+
+    .buttons-container {
+      margin-left: 40px;
+      .vote-button {
+        height: 80px;
+        width: 50%;
+        border: none;
+        img {
+          width: 40px;
+        }
+        &.thumbs-up {
+          background-color: #50c4bc;
+        }
+        &.thumbs-down {
+          background-color: #f0ac50;
+        }
+      }
+    }
+  }
+
+  .days-count {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    .closing {
+      background-color: rgba(0, 0, 0, 0.3);
+      text-transform: uppercase;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 26px;
+      font-weight: 200;
+      padding: 0 20px;
+    }
+    .days {
+      background-color: rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      font-weight: 200;
+      padding: 0 20px;
+      font-size: 32px;
+    }
+  }
+}
