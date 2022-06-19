@@ -23,6 +23,7 @@ export type RulingModel = {
 })
 export class PreviousRulingsComponent implements OnInit {
   previousRulings: RulingModel[] = [];
+  selectedLayout = 'Grid';
 
   constructor(private dataService: DataService) { }
 
@@ -80,5 +81,9 @@ export class PreviousRulingsComponent implements OnInit {
     } else {
       ruling.vote = '';
     }
+  }
+
+  changeLayout(layout: string): void {
+    this.selectedLayout = layout;
   }
 }

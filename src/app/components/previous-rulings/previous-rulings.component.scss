@@ -46,6 +46,88 @@
   }
 
   .rule-container {
+    &.cards-container {
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      .rule-item {
+        height: 300px;
+        margin: 10px;
+        .backdrop {
+          display: none;
+        }
+        .trend-thumb {
+          width: 32px;
+          height: 32px;
+          padding: 8px;
+          top: calc(50% - 24px);
+        }
+        .gauge {
+          height: 30px;
+          .gauge-bar {
+            img {
+              width: 18px;
+            }
+            span {
+              font-size: 18px;
+            }
+          }
+        }
+        .info-row {
+          img {
+            width: 100%;
+          }
+          .content {
+            width: 100%;
+            position: absolute;
+            padding-left: 40px;
+            margin-top: 60px;
+            .title {
+              line-height: 1;
+            }
+            .description {
+              font-size: 14px;
+              font-weight: normal;
+              word-break: break-word;
+              white-space: normal !important;
+              display: -webkit-box !important;
+              /* autoprefixer: off */
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+              overflow: hidden;
+            }
+          }
+          .vote-container {
+            position: absolute;
+            width: 100%;
+            bottom: 35px;
+            right: 20px;
+            .elapsed-time {
+              font-size: 13px;
+              font-weight: normal;
+            }
+            .buttons-container {
+              .vote-button {
+                height: 32px;
+                width: 32px;
+                img {
+                  width: 16px;
+                }
+              }
+              .vote-now {
+                height: 32px;
+                &[disabled] {
+                  background-color: rgba(130, 130, 130, 0.4);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .rule-item {
     height: 180px;
     margin: 15px 0;
     position: relative;
@@ -75,7 +157,7 @@
     .gauge {
       position: absolute;
       bottom: 0;
-      height: 60px;
+      height: 55px;
       width: 100%;
       display: flex;
       .gauge-bar {
