@@ -1,5 +1,4 @@
 .current-rule-container {
-  // height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -89,4 +88,56 @@
       font-size: 32px;
     }
   }
+
+  @media(max-width: 990px) {
+    .top-row {
+      padding: 100px 0 60px;
+      .offset-1 {
+        margin-left: 0;
+        width: 50%;
+      }
+      .veredict-container {
+        margin-left: 30px;
+        .default-text {
+          font-size: 14px;
+        }
+        .name {
+          font-size: 34px;
+        }
+        .veredict {
+          font-size: 20px;
+        }
+        .description {
+          font-size: 18px;
+        }
+        .wiki-row {
+          span {
+            padding: 0 10px;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .buttons-container {
+        margin-left: 30px;
+        .vote-button {
+          height: 40px;
+          img {
+            width: 24px;
+          }
+        }
+      }
+    }
+
+    .days-count {
+      height: 40px;
+      .closing {
+        font-size: 18px;
+      }
+      .days {
+        font-size: 20px;
+      }
+    }
+  }
+
 }

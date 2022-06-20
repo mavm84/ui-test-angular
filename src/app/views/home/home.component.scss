@@ -72,4 +72,46 @@
       }
     }
   }
+
+  @media(max-width: 990px) {
+    .offset-1  {
+      margin-left: 0;
+      width: 100%;
+    }
+    .description-container {
+      height: 120px;
+      .center-desc {
+        width: 80%;
+        .default-text {
+          font-size: 18px;
+        }
+      }
+      .close {
+        display: none;
+      }
+      .default-text {
+        font-size: 14px;
+      }
+      .highlight-text {
+        font-size: 20px;
+      }
+    }
+
+    .submit-container {
+      height: 100px;
+      .backdrop {
+        .submit-description {
+          font-size: 22px;
+        }
+        button {
+          height: 60px;
+          width: 280px;
+          span {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+
 }

@@ -23,7 +23,7 @@ export type RulingModel = {
 })
 export class PreviousRulingsComponent implements OnInit {
   previousRulings: RulingModel[] = [];
-  selectedLayout = 'Grid';
+  selectedLayout = 'List';
 
   constructor(private dataService: DataService) { }
 
