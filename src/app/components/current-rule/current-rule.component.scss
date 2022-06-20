@@ -89,7 +89,7 @@
     }
   }
 
-  @media(max-width: 990px) {
+  @media(max-width: 992px) {
     .top-row {
       padding: 100px 0 60px;
       .offset-1 {
@@ -140,4 +140,44 @@
     }
   }
 
+  @media(max-width: 648px) {
+    .top-row {
+      padding: 60px 0 60px;
+      .veredict-container {
+        margin-left: 15px;
+        .default-text {
+          font-size: 12px;
+        }
+        .veredict {
+          font-size: 16px;
+        }
+        .description {
+          font-size: 16px;
+        }
+        .wiki-row {
+          display: none;
+        }
+      }
+
+      .buttons-container {
+        margin-left: 15px;
+        .vote-button {
+          height: 36px;
+          img {
+            width: 20px;
+          }
+        }
+      }
+    }
+
+    .days-count {
+      height: 38px;
+      .closing {
+        font-size: 16px;
+      }
+      .days {
+        font-size: 18px;
+      }
+    }
+  }
 }

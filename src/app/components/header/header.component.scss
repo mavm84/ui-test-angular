@@ -33,12 +33,22 @@
     }
   }
 
-  @media(max-width: 990px) {
+  @media(max-width: 992px) {
     height: 80px;
     .navbar {
       padding: 30px;
       .navbar-brand {
         font-size: 30px;
+      }
+    }
+  }
+
+  @media(max-width: 648px) {
+    height: 60px;
+    .navbar {
+      padding: 10px 15px;
+      .navbar-brand {
+        font-size: 28px;
       }
     }
   }

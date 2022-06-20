@@ -73,7 +73,7 @@
     }
   }
 
-  @media(max-width: 990px) {
+  @media(max-width: 992px) {
     .offset-1  {
       margin-left: 0;
       width: 100%;
@@ -108,6 +108,43 @@
           width: 280px;
           span {
             font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  @media(max-width: 648px) {
+    .description-container {
+      margin: 40px 15px 20px;
+      height: 140px;
+      .left-desc {
+        width: 30%;
+      }
+      .center-desc {
+        width: 70%;
+        .default-text {
+          font-size: 16px;
+        }
+      }
+      .highlight-text {
+        font-size: 24px;
+      }
+    }
+
+    .submit-container {
+      height: 130px;
+      .backdrop {
+        padding: 15px;
+        flex-direction: column;
+        .submit-description {
+          font-size: 22px;
+        }
+        button {
+          height: 50px;
+          width: 280px;
+          span {
+            font-size: 20px;
           }
         }
       }
